@@ -1,0 +1,9 @@
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\bin\Debug\Triangle area cal.exe.config
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\bin\Debug\Triangle area cal.exe
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\bin\Debug\Triangle area cal.pdb
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.csprojResolveAssemblyReference.cache
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle_area_cal.Form1.resources
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle_area_cal.Properties.Resources.resources
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.csproj.GenerateResource.Cache
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.exe
+e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.pdb
