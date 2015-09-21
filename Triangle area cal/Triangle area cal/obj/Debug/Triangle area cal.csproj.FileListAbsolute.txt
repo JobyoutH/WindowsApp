@@ -7,3 +7,12 @@ e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj
 e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.csproj.GenerateResource.Cache
 e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.exe
 e:\documents\visual studio 2015\Projects\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.pdb
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\bin\Debug\Triangle area cal.exe.config
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.exe
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.pdb
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\bin\Debug\Triangle area cal.exe
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\bin\Debug\Triangle area cal.pdb
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\obj\Debug\Triangle_area_cal.Form1.resources
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\obj\Debug\Triangle_area_cal.Properties.Resources.resources
+E:\Documents\GitHub\WindowsApp\Triangle area cal\Triangle area cal\obj\Debug\Triangle area cal.csproj.GenerateResource.Cache
