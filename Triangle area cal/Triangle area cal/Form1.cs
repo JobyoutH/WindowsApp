@@ -51,8 +51,11 @@ namespace Triangle_area_cal
             }
         }
 
+        static int f = 0;
+
         private void sTextChanged(object sender, EventArgs e)
         {
+            
             if (ina1.Text != null && inb1.Text != null && inc1.Text != null)
             {
                 double a, b, c, s;
@@ -67,11 +70,27 @@ namespace Triangle_area_cal
 
                     if (s == 0)
                     {
-                        out1.Text = "null";
+                        out1.Text = "";
+                        f++;
+
+                        switch (f)
+                        {
+                            case 1: MessageBox.Show("你输的是三角形吗！？"); break;
+                            case 2: MessageBox.Show("Are you serious ?"); break;
+                            case 3: MessageBox.Show("数体教？"); break;
+                            case 4: MessageBox.Show("数死早？"); break;
+                            case 5: MessageBox.Show("你还是回家种地吧！"); break;
+                            case 6: MessageBox.Show("你走！"); break;
+                            case 7: MessageBox.Show("爱过！"); break;
+                            default:
+                                MessageBox.Show("再不走打你了！"); return;
+                        }
+
                     }
                     else
                     {
                         out1.Text = s.ToString("0.00");
+                        f = 0;
                         panel1.Invalidate();
                     }  
 
@@ -141,6 +160,7 @@ namespace Triangle_area_cal
                 gc.DrawString(A, ff, bru, (float)(panel1.Width / 2.0 - 8), (float)y1 + 10);
                 gc.DrawString(B, ff, bru, (float)((x1 + x) / 2.0 - 40), (float)((y1 + y) / 2.0 - 18));
                 gc.DrawString(C, ff, bru, (float)((x2 + x) / 2.0 + 20), (float)((y1 + y) / 2.0 - 18));
+
             }
             catch (FormatException)
             { }
