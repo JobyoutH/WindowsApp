@@ -77,11 +77,11 @@ namespace Triangle_area_cal
 
                         switch (f)
                         {
-                            case 1: MessageBox.Show("你输的是三角形吗！？"); break;
-                            case 2: MessageBox.Show("Are you serious ?"); break;
-                            case 3: MessageBox.Show("数体教？"); break;
+                            case 1: MessageBox.Show("两边之和大于第三边，谢谢！"); break;
+                            case 2: MessageBox.Show("语死早？"); break;
+                            case 3: MessageBox.Show("Are you serious ?"); break;
                             case 4: MessageBox.Show("你还是回家种地吧？"); break;
-                            case 5: MessageBox.Show("有杀气？"); break;
+                            case 5: MessageBox.Show("有杀气！？"); break;
                             case 6: MessageBox.Show("给你3秒从这里消失！"); break;
                             case 7: MessageBox.Show("弓箭手准备！！"); break;
                             default:
