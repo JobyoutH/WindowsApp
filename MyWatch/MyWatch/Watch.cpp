@@ -1,6 +1,3 @@
-/*This source code copyrighted by Lazy Foo' Productions (2004-2015)
-and may not be redistributed without written permission.*/
-
 //Using SDL, SDL_image, standard IO, math, and strings
 #include <SDL.h>
 #include <SDL_image.h>
@@ -358,7 +355,7 @@ double degrees1 = 0;
 double degrees2 = 0;
 double degrees3 = 0;
 
-/*callback1有一定概率没有作用，所以将原callback1中的代码写进了callback2中*/
+/*callback1锟斤拷一锟斤拷锟斤拷锟斤拷没锟斤拷锟斤拷锟矫ｏ拷锟斤拷锟皆斤拷原callback1锟叫的达拷锟斤拷写锟斤拷锟斤拷callback2锟斤拷*/
 Uint32 callback1(Uint32 interval, void *param)
 {
 	return interval;
