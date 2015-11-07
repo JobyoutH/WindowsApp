@@ -11,8 +11,8 @@
 
 
 //Screen dimension constants
-const int SCREEN_WIDTH = 800;
-const int SCREEN_HEIGHT = 800;
+const int SCREEN_WIDTH = 900;
+const int SCREEN_HEIGHT = 900;
 
 //Texture wrapper class
 class LTexture
@@ -75,6 +75,9 @@ SDL_Renderer* gRenderer = NULL;
 
 //Globally used font
 TTF_Font *gFont = NULL;
+
+//Update the time and date
+void update_time();
 
 //Scene texture
 LTexture gPicTexture3;
@@ -354,8 +357,8 @@ void close()
 double degrees1 = 0;
 double degrees2 = 0;
 double degrees3 = 0;
+std::string date = "";
 
-/*callback1��һ������û�����ã����Խ�ԭcallback1�еĴ���д����callback2��*/
 Uint32 callback1(Uint32 interval, void *param)
 {
 	return interval;
@@ -377,15 +380,14 @@ Uint32 callback2(Uint32 interval, void *param)
 Uint32 callback3(Uint32 interval, void *param)
 {
 	if (degrees3 == 360){
+		update_time();
 		degrees3 = 0;
 	}
 	degrees3 += 0.25;
 	return interval;
 }
 
-int main(int argc, char* args[])
-{
-	std::string date = "";
+void update_time(){
 	time_t now;
 	struct tm *fmt;
 
@@ -405,19 +407,27 @@ int main(int argc, char* args[])
 	{
 		//case 0:date[0] = 'S'; date[1] = 'U'; date[2] = 'N'; break;
 	case 0:date += "SUN "; break;
-	case 1:date[0] = 'M'; date[1] = 'O'; date[2] = 'N'; break;
-	case 2:date[0] = 'T'; date[1] = 'U'; date[2] = 'E'; break;
-	case 3:date[0] = 'W'; date[1] = 'E'; date[2] = 'D'; break;
-	case 4:date[0] = 'T'; date[1] = 'H'; date[2] = 'U'; break;
-	case 5:date[0] = 'F'; date[1] = 'R'; date[2] = 'I'; break;
-	case 6:date[0] = 'S'; date[1] = 'A'; date[2] = 'T'; break;
+	case 1:date += "MON "; break;
+	case 2:date += "TUE "; break;
+	case 3:date += "WED "; break;
+	case 4:date += "THU "; break;
+	case 5:date += "FRI "; break;
+	case 6:date += "SAT "; break;
 	default:
 		break;
 	}
-
+	date += " ";
+	date += '0' + (fmt->tm_mon + 1) / 10;
+	date += '0' + fmt->tm_mon + 1 - (fmt->tm_mon + 1) / 10 * 10;
+	date += '/';
 	date += '0' + mday / 10;
 	date += '0' + mday - mday / 10 * 10;
+}
 
+int main(int argc, char* args[])
+{
+	
+	update_time();
 	SDL_TimerID timer1 = SDL_AddTimer(1000, callback1, NULL);
 	SDL_TimerID timer2 = SDL_AddTimer(1000, callback2, NULL);
 	SDL_TimerID timer3 = SDL_AddTimer(60000, callback3, NULL);
@@ -469,7 +479,7 @@ int main(int argc, char* args[])
 
 				//Render pic&text
 				gPicTexture0.render((SCREEN_WIDTH - gPicTexture0.getWidth()) / 2, (SCREEN_HEIGHT - gPicTexture0.getHeight()) / 2, NULL, 0, NULL, flipType);
-				gTextTexture.render((SCREEN_WIDTH)*0.75, (SCREEN_HEIGHT - gTextTexture.getHeight()) / 2);
+				gTextTexture.render((SCREEN_WIDTH - gTextTexture.getWidth()) / 2, SCREEN_HEIGHT*0.65);
 				gPicTexture1.render((SCREEN_WIDTH - gPicTexture1.getWidth()) / 2, (SCREEN_HEIGHT - gPicTexture1.getHeight()) / 2, NULL, degrees3, NULL, flipType);
 				gPicTexture2.render((SCREEN_WIDTH - gPicTexture2.getWidth()) / 2, (SCREEN_HEIGHT - gPicTexture2.getHeight()) / 2, NULL, degrees2, NULL, flipType);
 				gPicTexture3.render((SCREEN_WIDTH - gPicTexture3.getWidth()) / 2, (SCREEN_HEIGHT - gPicTexture3.getHeight()) / 2, NULL, degrees1, NULL, flipType);
